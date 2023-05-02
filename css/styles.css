@@ -1,15 +1,29 @@
+.body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
+    width: 500px;
+    height: 500px;
     flex-direction: column;
 }
 
 .row {
     display: flex;
+    flex: 1;
 }
 
 .div-grid {
-    width: 20px;
-    height: 20px;
     flex: 1;
     border: solid black .1px;
+}
+
+/* HOVER COLOR BLACK */
+.black {
+    background-color: black;
 }
