@@ -1,4 +1,4 @@
-let size = 16;
+let size = 100;
 let container = document.querySelector(".container");
 let div;
 let row
@@ -15,3 +15,12 @@ for (let i = 0; i < size; i++) {
         row.appendChild(div);
     }
 }
+
+
+let divGrid = document.querySelectorAll(".div-grid");
+divGrid.forEach(element => {
+    element.addEventListener("mouseover", function() {
+        this.classList.add("black");
+    })
+});
+
