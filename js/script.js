@@ -37,6 +37,5 @@ divGrid.forEach(element => {
 clearCanvas.addEventListener("click", function(){
     divGrid.forEach(element => {
         element.classList.remove("black");
-        element.classList.remove("rainbow");
     });
 })
