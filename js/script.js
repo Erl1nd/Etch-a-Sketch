@@ -1,4 +1,4 @@
-let size = 16;
+let size = 5;
 let container = document.querySelector(".container");
 let div;
 let row
@@ -31,23 +31,6 @@ divGrid.forEach(element => {
 
 
 // rainbow pen
-rainbowPen.addEventListener("click", function() {
-    rainbowPen.classList.toggle("toggled");
-
-    if (rainbowPen.classList.contains("toggled")) {
-        divGrid.forEach(element => {
-            element.addEventListener("mouseover", function() {
-                this.classList.add("rainbow");
-            })
-        });
-    } else {
-        divGrid.forEach(element => {
-            element.addEventListener("mouseover", function() {
-                this.classList.remove("rainbow");
-            })
-        });
-    }
-})
 
 
 // clear canvas
