@@ -4,6 +4,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .container {
@@ -23,7 +25,41 @@ body {
     flex: 1;
 }
 
-/* HOVER COLOR BLACK */
+/* CONTROLS */
+.controls {
+    display: flex;
+    gap: 8px;
+    width: 700px;
+}
+
+button {
+    flex: 1;
+    padding: 16px 32px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+/* Draw in black */
 .black {
     background-color: black;
+}
+
+/* Toggle button*/
+.toggled {
+    background-color: rgb(3, 88, 0);
+    color: white;
+}
+
+/* erase */
+.erase {
+    background-color: white;
+}
+
+/* Rainbow Pen */
+.rainbow {
+    background-color: blue;
 }
