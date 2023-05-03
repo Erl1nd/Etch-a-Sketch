@@ -1,4 +1,3 @@
-
 // SETTING UP THE GRID SYSTEM
 let size = document.getElementById("slider").value;
 let container = document.querySelector(".container");

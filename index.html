@@ -18,41 +18,47 @@
     <title>Etch A Sketch</title>
 </head>
 <body>
-    <div class="container"></div>
-     <div class="controls">
-        <!-- PEN COLOR -->
-        <div class="pen-color">
-            <input type="color" id="fav-color" name="favcolor" value="#000000">
-            <label for="favcolor">Pen Color</label>
+    <div class="hero">
+
+        <div class="container"></div>
+        <div class="controls">
+           <!-- PEN COLOR -->
+           <div class="pen-color">
+               <input type="color" id="fav-color" name="favcolor" value="#000000">
+               <label for="favcolor">Pen Color</label>
+           </div>
+   
+           <!-- CANVAS COLOR -->
+           <div class="canvas-color">
+               <input type="color" id="canvas-color" name="canvascolor" value="#ffffff">
+               <label for="canvascolor">Canvas Color</label>
+           </div>
+   
+           <h4>Canvas Grid</h4>
+           <!-- SLIDER -->
+           <div class="slider">
+               <input id="slider" type="range" min="0" max="100" value="35" oninput="rangeValue1.innerText = this.value, rangeValue2.innerText = this.value">
+               <p>Grid: <span id="rangeValue1">35</span> x <span id="rangeValue2">35</span></p>
+           </div>
+           <button class="create-new-grid">Create New Canvas</button>
+   
+           <!-- TOGGLE GRID -->
+           <button class="toggle-grid">Toggle Grid Lines</button>
+   
+   
+           <h4>Tools</h4>
+           <!-- TOGGLE ERASER -->
+           <button class="toggle-eraser">Toggle Eraser</button>
+   
+           <!-- RAINBOW PEN -->
+           <button class="toggle-rainbow-pen">Toggle Rainbow Pen</button>
+   
+           <!-- CLEAR CANVAS -->
+           <button class="clear-canvas">Clear Canvas</button>
         </div>
-
-        <!-- CANVAS COLOR -->
-        <div class="canvas-color">
-            <input type="color" id="canvas-color" name="canvascolor" value="#ffffff">
-            <label for="canvascolor">Canvas Color</label>
-        </div>
-
-        <h4>Canvas Grid</h4>
-        <!-- SLIDER -->
-        <div class="slider">
-            <input id="slider" type="range" min="0" max="100" value="35" oninput="rangeValue1.innerText = this.value, rangeValue2.innerText = this.value">
-            <p>Grid: <span id="rangeValue1">35</span> x <span id="rangeValue2">35</span></p>
-        </div>
-        <button class="slider-submit">Create New Canvas</button>
-
-        <!-- TOGGLE GRID -->
-        <button class="toggle-grid">Toggle Grid Lines</button>
-
-
-        <h4>Tools</h4>
-        <!-- TOGGLE ERASER -->
-        <button class="toggle-eraser">Toggle Eraser</button>
-
-        <!-- RAINBOW PEN -->
-        <button class="toggle-rainbow-pen">Toggle Rainbow Pen</button>
-
-        <!-- CLEAR CANVAS -->
-        <button class="clear-canvas">Clear Canvas</button>
-     </div>
+    </div>
+    <div class="footer">
+        <p>Made by Erlind Generalao. <a href="https://github.com/Erl1nd/etch-a-Sketch" target="_blank">Check Repository.</a></p> 
+    </div>
 </body>
 </html>
