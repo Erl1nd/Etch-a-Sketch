@@ -32,7 +32,11 @@ divGrid.forEach(element => {
 
 // CANVAS COLOR
 let canvasColor = document.getElementById("canvas-color");
-container.style.backgroundColor = `${canvasColor.value}`;
+canvasColor.addEventListener("change", function(){
+    container.style.backgroundColor = canvasColor.value;
+})
+
+
 
 // TOGGLE GRID
 let toggleGrid = document.querySelector(".toggle-grid");

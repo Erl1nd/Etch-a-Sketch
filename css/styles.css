@@ -20,7 +20,7 @@ h4 {
     height: 660px;
     flex-direction: column;
     border: 40px solid #393E46;
-    /* background-color: white; */
+    background-color: white;
 }
 
 .row {
