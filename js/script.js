@@ -63,3 +63,12 @@ toggleEraser.addEventListener("click", function(){
         });
     }
 })
+
+// CLEAR CANVAS
+let clearCanvas = document.querySelector(".clear-canvas");
+clearCanvas.addEventListener("click", function(){
+    divGrid.forEach(element => {
+        element.style.backgroundColor = "transparent";
+    });
+    
+})
