@@ -1,7 +1,9 @@
+
+// SETTING UP THE GRID SYSTEM
 let size = 5;
 let container = document.querySelector(".container");
 let div;
-let row
+let row;
 
 
 for (let i = 0; i < size; i++) {
@@ -18,24 +20,11 @@ for (let i = 0; i < size; i++) {
 
 
 let divGrid = document.querySelectorAll(".div-grid");
-let rainbowPen = document.querySelector(".rainbow-pen");
-let clearCanvas = document.querySelector(".clear-canvas");
-let eraser = document.querySelector(".eraser");
+let penColor = document.getElementById("favcolor");
 
 // draw 
 divGrid.forEach(element => {
     element.addEventListener("mouseover", function() {
-        this.classList.add("black");
+        this.style.backgroundColor = `${penColor.value}`;
     })
 });
-
-
-// rainbow pen
-
-
-// clear canvas
-clearCanvas.addEventListener("click", function(){
-    divGrid.forEach(element => {
-        element.classList.remove("black");
-    });
-})

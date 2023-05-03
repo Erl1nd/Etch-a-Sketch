@@ -4,16 +4,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 40px;
+    background-color: #222831;
 }
 
 .container {
     display: flex;
-    width: 700px;
-    height: 700px;
+    width: 660px;
+    height: 660px;
     flex-direction: column;
-    border: 1px solid;
+    border: 40px solid #393E46;
+    background-color: white;
 }
 
 .row {
@@ -27,13 +28,16 @@ body {
 
 /* CONTROLS */
 .controls {
+    padding: 24px;
+    height: 692px;
     display: flex;
+    flex-direction: column;
     gap: 8px;
-    width: 700px;
+    width: 300px;
+    background-color: #393E46;
 }
 
 button {
-    flex: 1;
     padding: 16px 32px;
     background-color: white;
     border: 1px solid black;
@@ -43,23 +47,21 @@ button:hover {
     background-color: black;
     color: white;
 }
-/* Draw in black */
-.black {
-    background-color: black;
-}
 
-/* Toggle button*/
-.toggled {
-    background-color: rgb(3, 88, 0);
+/* PEN COLOR */
+.pen-color {
+    height: 49px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
     color: white;
 }
 
-/* erase */
-.white {
-    background-color: white;
-}
-
-/* Rainbow Pen */
-.rainbow {
-    background-color: blue;
+#favcolor {
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-width: 0;
+    height: 49px;
 }
