@@ -52,7 +52,7 @@ toggleEraser.addEventListener("click", function(){
     if(toggleEraser.classList.contains("button-on")) {
         divGrid.forEach(element => {
             element.addEventListener("mouseover", function() {
-                this.style.backgroundColor = `white`;
+                this.style.backgroundColor = "transparent";
             })
         });
     } else {
