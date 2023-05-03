@@ -1,6 +1,6 @@
 
 // SETTING UP THE GRID SYSTEM
-let size = 50;
+let size = document.getElementById("slider").value;
 let container = document.querySelector(".container");
 let div;
 let row;
@@ -20,11 +20,26 @@ for (let i = 0; i < size; i++) {
 
 
 let divGrid = document.querySelectorAll(".div-grid");
-let penColor = document.getElementById("favcolor");
 
-// draw 
+// PEN COLOR
+let penColor = document.getElementById("fav-color");
+
 divGrid.forEach(element => {
     element.addEventListener("mouseover", function() {
         this.style.backgroundColor = `${penColor.value}`;
     })
 });
+
+// CANVAS COLOR
+let canvasColor = document.getElementById("canvas-color");
+container.style.backgroundColor = `${canvasColor.value}`;
+
+// TOGGLE GRID
+let toggleGrid = document.querySelector(".toggle-grid");
+toggleGrid.addEventListener("click", function(){
+    toggleGrid.classList.toggle("button-on")
+    divGrid.forEach(element => {
+        element.classList.toggle("div-grid-border");
+    });
+
+})
