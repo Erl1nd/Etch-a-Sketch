@@ -6,6 +6,7 @@ body {
     justify-content: center;
     gap: 40px;
     background-color: #222831;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -55,6 +56,7 @@ button:hover {
     align-items: center;
     gap: 18px;
     color: white;
+    font-weight: 500;
 }
 
 #favcolor {

@@ -1,6 +1,6 @@
 
 // SETTING UP THE GRID SYSTEM
-let size = 5;
+let size = 50;
 let container = document.querySelector(".container");
 let div;
 let row;
