@@ -36,8 +36,6 @@ canvasColor.addEventListener("change", function(){
     container.style.backgroundColor = canvasColor.value;
 })
 
-
-
 // TOGGLE GRID
 let toggleGrid = document.querySelector(".toggle-grid");
 toggleGrid.addEventListener("click", function(){
