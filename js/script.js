@@ -49,6 +49,7 @@ toggleGrid.addEventListener("click", function(){
 let toggleEraser = document.querySelector(".toggle-eraser");
 toggleEraser.addEventListener("click", function(){
     toggleEraser.classList.toggle("button-on")
+    toggleRainbowPen.classList.remove("button-on");
     if(toggleEraser.classList.contains("button-on")) {
         divGrid.forEach(element => {
             element.addEventListener("mouseover", function() {
@@ -56,6 +57,27 @@ toggleEraser.addEventListener("click", function(){
             })
         });
     } else {
+        divGrid.forEach(element => {
+            element.addEventListener("mouseover", function() {
+                this.style.backgroundColor = `${penColor.value}`;
+            })
+        });
+    }
+})
+
+// TOGGLE RAINBOW PEN
+let toggleRainbowPen = document.querySelector(".toggle-rainbow-pen");
+toggleRainbowPen.addEventListener("click", function(){
+    toggleRainbowPen.classList.toggle("button-on");
+    toggleEraser.classList.remove("button-on");
+    if(toggleRainbowPen.classList.contains("button-on")) {
+        divGrid.forEach(element => {
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            element.addEventListener("mouseover", function() {
+                this.style.backgroundColor = "#" + randomColor;
+            })
+        });
+    }  else {
         divGrid.forEach(element => {
             element.addEventListener("mouseover", function() {
                 this.style.backgroundColor = `${penColor.value}`;
