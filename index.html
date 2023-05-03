@@ -14,6 +14,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
     <title>Etch A Sketch</title>
 </head>
 <body>
@@ -31,10 +32,11 @@
             <label for="canvascolor">Canvas Color</label>
         </div>
 
+        <h4>Canvas Grid</h4>
         <!-- SLIDER -->
         <div class="slider">
-            <input id="slider" type="range" min="0" max="100" value="16" oninput="rangeValue1.innerText = this.value, rangeValue2.innerText = this.value">
-            <p>Grid: <span id="rangeValue1">16</span> x <span id="rangeValue2">16</span></p>
+            <input id="slider" type="range" min="0" max="100" value="35" oninput="rangeValue1.innerText = this.value, rangeValue2.innerText = this.value">
+            <p>Grid: <span id="rangeValue1">35</span> x <span id="rangeValue2">35</span></p>
         </div>
         <button class="slider-submit">Create New Canvas</button>
 
@@ -45,6 +47,9 @@
         <h4>Tools</h4>
         <!-- TOGGLE ERASER -->
         <button class="toggle-eraser">Toggle Eraser</button>
+
+        <!-- RAINBOW PEN -->
+        <button class="toggle-rainbow-pen">Toggle Rainbow Pen</button>
 
         <!-- CLEAR CANVAS -->
         <button class="clear-canvas">Clear Canvas</button>
