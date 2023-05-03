@@ -41,5 +41,23 @@ toggleGrid.addEventListener("click", function(){
     divGrid.forEach(element => {
         element.classList.toggle("div-grid-border");
     });
+})
 
+// TOGGLE ERASER
+let toggleEraser = document.querySelector(".toggle-eraser");
+toggleEraser.addEventListener("click", function(){
+    toggleEraser.classList.toggle("button-on")
+    if(toggleEraser.classList.contains("button-on")) {
+        divGrid.forEach(element => {
+            element.addEventListener("mouseover", function() {
+                this.style.backgroundColor = `white`;
+            })
+        });
+    } else {
+        divGrid.forEach(element => {
+            element.addEventListener("mouseover", function() {
+                this.style.backgroundColor = `${penColor.value}`;
+            })
+        });
+    }
 })

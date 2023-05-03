@@ -9,6 +9,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h4 {
+    color: white;
+    margin-bottom: 0;
+}
+
 .container {
     display: flex;
     width: 660px;
@@ -92,7 +97,7 @@ color: white;
 }
 
 .slider input[type="range"] {
--webkit-appearance:none;
+-webkit-appearance:none !important;
 width: 100%;
 height: 4px;
 background: white;
@@ -116,8 +121,13 @@ background: white;
 
 button {
     padding: 16px 32px;
+    background-color: white;
 }
 
+button:hover {
+    background-color: black;
+    color: white;
+}
 
 /* TOGGLER */
 .button-on {
@@ -126,6 +136,6 @@ button {
 }
 
 .div-grid-border {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: .1px solid rgb(156, 156, 156);
+    border-left: .1px solid rgb(156, 156, 156);
 }
