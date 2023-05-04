@@ -151,3 +151,13 @@ button:hover {
     border-top: .1px solid rgb(156, 156, 156);
     border-left: .1px solid rgb(156, 156, 156);
 }
+
+/* Warning */
+.warning {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
