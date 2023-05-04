@@ -32,6 +32,30 @@ canvasColor.addEventListener("change", function(){
 createNewCanvas.addEventListener ("click", function(){
     deletePreviousCanvas();
     populateBoard(slider.value);
+
+    eraserOn = false;
+    rainbowPenOn = false;
+    if(toggleEraser.classList.contains("button-on")) {
+        toggleEraser.classList.remove("button-on");
+    }
+
+    if(toggleRainbowPen.classList.contains("button-on")) {
+        toggleRainbowPen.classList.remove("button-on");
+    }
+
+
+    if (eraserOn == false && rainbowPenOn == false) {
+        document.querySelectorAll(".div-grid").forEach(element => {
+            element.addEventListener("mouseover", function() {
+                this.style.backgroundColor = `${penColor.value}`;
+            })
+        });
+    }
+
+    toggleGrid.classList.add("button-on")
+    document.querySelectorAll(".div-grid").forEach(element => {
+        element.classList.toggle("div-grid-border");
+    });
 })
 
 
