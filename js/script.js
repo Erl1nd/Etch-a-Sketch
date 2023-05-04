@@ -140,4 +140,3 @@ function clear() {
 //         console.log("no previous squares");
 //     }
 // }
-
