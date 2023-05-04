@@ -34,7 +34,11 @@ createNewGird.addEventListener("click", function(){
     let toggleGrid = document.querySelector(".toggle-grid");
     let divGrid = document.querySelectorAll(".div-grid");
     toggleGrid.addEventListener("click", function(){
-        toggleGrid.classList.toggle("button-on")
+        if (toggleGrid.classList.contains("button-on")) {
+            toggleGrid.classList.remove("button-on")
+        } else {
+            toggleGrid.classList.add("button-on")
+        }
         divGrid.forEach(element => {
             element.classList.toggle("div-grid-border");
         });
