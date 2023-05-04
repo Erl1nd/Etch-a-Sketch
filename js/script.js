@@ -13,6 +13,8 @@ let rainbowPenOn = false;
 
 
 populateBoard(35);
+
+// PEN COLOR
 if (eraserOn == false && rainbowPenOn == false) {
     document.querySelectorAll(".div-grid").forEach(element => {
         element.addEventListener("mouseover", function() {
@@ -26,9 +28,16 @@ canvasColor.addEventListener("change", function(){
     container.style.backgroundColor = canvasColor.value;
 })
 
+
+createNewCanvas.addEventListener ("click", function(){
+    deletePreviousCanvas();
+    populateBoard(slider.value);
+})
+
+
 // TOGGLE GRID
 toggleGrid.addEventListener("click", function (){
-    toggleGrid.classList.add("button-on")
+    toggleGrid.classList.toggle("button-on")
     document.querySelectorAll(".div-grid").forEach(element => {
         element.classList.toggle("div-grid-border");
     });
@@ -130,13 +139,13 @@ function clear() {
 
 
 
-// function deletePreviousCanvas() {
-//     let squares = document.querySelectorAll(".row")
-//     if (container.hasChildNodes()) {
-//         squares.forEach(div => {
-//             div.remove();
-//         });
-//     } else {
-//         console.log("no previous squares");
-//     }
-// }
+function deletePreviousCanvas() {
+    let squares = document.querySelectorAll(".row")
+    if (container.hasChildNodes()) {
+        squares.forEach(div => {
+            div.remove();
+        });
+    } else {
+        console.log("no previous squares");
+    }
+}
